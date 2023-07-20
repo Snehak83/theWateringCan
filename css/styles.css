@@ -1,8 +1,15 @@
 .jumbotron {
-    background-color: rgb(136, 37, 37);
+    background-color: gainsboro;
 }
 
 .site-footer {
-    background-color: rgb(136, 37, 37);
+    background-color: gainsboro;
 }
 
+h1, h5, h6 {
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+body {
+    font-family:  serif, system-ui; 
+}
