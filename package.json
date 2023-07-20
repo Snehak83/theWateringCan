@@ -1,7 +1,7 @@
 {
-  "name": "thewateringcan",
+  "name": "theWateringCan",
   "version": "1.0.0",
-  "description": "webiste for small business",
+  "description": "Website for small business",
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
