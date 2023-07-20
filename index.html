@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>ggler
 <html lang="en">
 
 <head>
@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="row align-items-left">
                 <div class="col-4 col-sm-3 col-md-2">
-                    <a href="home.html"><img src="img/logo.jpg" class="img-fluid"></a>
+                    <a href="index.html"><img src="img/logo.jpg" class="img-fluid"></a>
                 </div>
                 <div class="col">
                     <h1>The Watering Can</h1>
@@ -31,26 +31,68 @@
                     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
                         <div class="container">
                             <a class="navbar-brand"></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#wateringNavbar" aria-controls="wateringNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#wateringNavbar" aria-controls="wateringNavbar" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon mr-auto align-item-start"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="wateringNavbar">
                                 <ul class="navbar-nav mr-auto align-item-start">
-                                    <li class="nav-item active"><a class="nav-link text-dark" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-info fa-lg"></i> Products</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-list fa-lg"></i> Events</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                                    <li class="nav-item active"><a class="nav-link text-dark" href="#"><i
+                                                class="fa fa-home fa-lg" aria-hidden="true"></i> Home</a></li>
+                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i
+                                                class="fa fa-info-circle fa-lg" aria-hidden="true"></i> About</a></li>
+                                    <li class="nav-item"><a class="nav-link text-dark" href="products.html"><i
+                                                class="fa fa-product-hunt" aria-hidden="true"></i> Products</a></li>
+                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i
+                                                class="fa fa-list fa-lg" aria-hidden="true"></i> Events</a></li>
+                                    <li class="nav-item"><a class="nav-link text-dark" href="contactus.html"><i
+                                                class="fa fa-address-card fa-lg" aria-hidden="true"></i> Contact Us</a>
+                                    </li>
                                 </ul>
                                 <ul class="navbar-nav">
-                                    <!-- This would be made into a modal to sign in?? -->
-                                    <li class="nav-item active"><a class="nav-link text-dark" href="#"><i class="fa fa-user-o fa-lg"></i> Login</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link text-dark" href="#" data-toggle="modal"
+                                            data-target="#loginModal">
+                                            <i class="fa fa-user-o fa-lg"></i> Login
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i
+                                                class="fa fa-shopping-cart fa-lg"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
-                    
-                    
+
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+                        aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </form>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -107,21 +149,21 @@
                     <div class="col-4 col-sm-2 offset-1">
                         <h5>LINKS</h5>
                         <ul class="list-unstyled">
+                            <li><a class="text-info" href="#">Home</a></li>
                             <li><a class="text-info" href="#">About</a></li>
-                            <li><a class="text-info" href="#">Products</a></li>
+                            <li><a class="text-info" href="products.html">Products</a></li>
                             <li><a class="text-info" href="#">Events</a></li>
                             <li><a class="text-info" href="contactus.html">Contact</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-sm-4 text-center">
+                    <div class="col-sm-4 text-center align-self-start">
                         <h5>COLLECTIONS</h5>
                         <ul class="list-unstyled">
                             <li><a class="text-info" href="#">Clothing</a></li>
                             <li><a class="text-info" href="#">Home Goods</a></li>
                             <li><a class="text-info" href="#">Featured</a></li>
-                            <!-- Add an empty list item to match the height -->
-                            <li>&nbsp;</li>
+                           
                         </ul>
                     </div>
 
