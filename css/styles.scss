@@ -6,18 +6,18 @@ $color-dark: #60106b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 $color-teal: #17A2B8;
 
-$body-font: "Open Sans", sans-serif;
-$header-font: "Lobster", cursive;
+// $body-font: serif, system-ui;
+// $header-font: "Libre Baskerville", sans-serif;
 
 
 
 
 body {
-    font-family: $body-font;
+    font-family: serif, system-ui;
 }
 
-h1, h2, h3 {
-    font-family: $header-font;
+h1, h2, h3, h5, h6 {
+    font-family: "Libre Baskerville", sans-serif;
 }
 
 h2 {

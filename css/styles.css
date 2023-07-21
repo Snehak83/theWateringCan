@@ -1,8 +1,8 @@
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: serif, system-ui; }
 
-h1, h2, h3 {
-  font-family: "Lobster", cursive; }
+h1, h2, h3, h5, h6 {
+  font-family: "Libre Baskerville", sans-serif; }
 
 h2 {
   color: #3046C5; }
