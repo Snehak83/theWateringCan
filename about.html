@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.scss" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre Baskerville|Open+Sans" />
     <title>The Watering Can</title>
 </head>
 
@@ -38,8 +38,19 @@
                                         class="fa fa-home fa-lg"></i> Home</a></li>
                             <li class="nav-item active"><a class="nav-link text-dark" href="about.html"><i
                                 class="fa fa-info-circle fa-lg" aria-hidden="true"></i> About</a></li>
-                            <li class="nav-item"><a class="nav-link text-dark" href="products.html"><i
-                                        class="fa fa-product-hunt fa-lg"></i> Products</a></li>
+                            <!-- Drop down list for products -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-dark dropdown-toggle" href="apparel.html" id="productsDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-product-hunt" aria-hidden="true"></i> Products
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                                        <a class="dropdown-item" href="apparel.html">Apparel</a>
+                                        <a class="dropdown-item" href="decor.html">Decor</a>
+                                        <a class="dropdown-item" href="artisans.html">Artisans</a>
+                                    </div>
+                                </li>
+
                             <li class="nav-item"><a class="nav-link text-dark" href="#"><i
                                         class="fa fa-list fa-lg"></i> Events</a></li>
                             <li class="nav-item"><a class="nav-link text-dark" href="contactus.html"><i
@@ -49,34 +60,104 @@
                             <div class="collapse navbar-collapse d-flex flex-row-reverse" id="wateringNavbar2">
                                 <ul class="navbar-nav">
                                     <!-- This would be made into a modal to sign in?? -->
-                                    <li class="nav-item active"><a class="nav-link text-dark" href="#"><i
-                                                class="fa fa-user-o fa-lg"></i> Login</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i
-                                                class="fa fa-shopping-cart fa-lg"></i></a></li>
+                                    <li class="nav-item active"><a class="nav-link text-dark" href="#" data-toggle="modal" data-target="#loginModal">
+                                        <i class="fa fa-user-o fa-lg"></i> Login</a></li>
+                                    <li class="nav-item"><a class="nav-link text-dark" href="#">
+                                        <i class="fa fa-shopping-cart fa-lg"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+                        aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </form>                                    
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
                 </div>
+      
             </div>
         </div>
     </header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
 
-    <div class="col-sm-10">
-        <h3>Who are we?</h3>
-            <p>The Watering Can is a clothing brand in India which stocks chic western wear and 
-                accessories. It showcases a mix of Western Wear including dresses, capes, jackets, 
-                overalls and more. Along with western wear, We work with the lovely artisans in Bengal, India and have 
-                collectively used our creative juices to bring together simple, usable yet aesthetically 
-                appealing pieces which can comfortably adorn spaces in your homes. We use cane, 
-                wicker, sabai, terracotta, wood and macrame to transform them into placemats, serve 
-                ware, baskets et al. The Watering Can is here this to time to narrate their story along 
-                with its own.
-                </p>
+                    <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
 
-
+                    <li class="breadcrumb-item active">About</li>
+                </ol> 
+            </div>
+        </div>
+        <div class="row row-content align-items-center">
+        <div class="col-md-7 ml-5">
+            <h3>WHO ARE WE?</h3>
+            <div class="media">
+                <div class="media-body align-self-center">
+                    <p class="d-none d-sm-block">The Watering Can is a clothing brand in India that stocks chic apparel, home 
+                        decorations, artisans, and accessories. It showcases a mix of Western Wear including dresses, capes, 
+                        jackets, overalls and more. We work with the lovely artisans in Bengal, India.
+                        Collectively, we used our creative juices to bring together simple, usable yet aesthetically 
+                        appealing pieces which can comfortably adorn spaces in your homes. We use cane, 
+                        wicker, sabai, terracotta, wood and macrame to transform them into placemats, serve 
+                        ware, and baskets. The Watering Can is here this time to narrate your story along 
+                        with our own.
+                    </p>
+                </div>
+        </div>
     </div>
+                <div class="col-sm-4">
+                <img class="d-flex ml-3 mb-5 img-thumbnail" class="img-fluid" src="/img/smart1.jpg" alt="Woman modeling"/>
+                </div>
+        <div class="container">
+            <div class="row row-content mb-3"> 
+                <div class="col">
+                <table>
+                    <tr> 
+                        <td>
+                            <img class="d-flex img-thumbnail" class="img-fluid" src="/img/tunics.jpg" alt="Colorful tunics" width="100%;" height="350"/>
+                        </td>
+                        <td>
+                            <img class="d-flex img-thumbnail" class="img-fluid" src="/img/doveDecor1.jpg" alt="Table decor with doves" width="100%;" height="350"/>
+                        </td>
+                        <td>
+                            <img class="d-flex img-thumbnail" class="img-fluid" src="/img/placemat.jpg" alt="placemat" width="100%;" height="350"/>
+                        </td>
+                        <td>
+                            <img class="d-flex img-thumbnail" class="img-fluid" src="/img/doveDecor2.jpg" alt="Floral arrangement with dove" width="100%;" />
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+                
+            
 
+        </div>
+    </div>
+    </div>
 
 
 
