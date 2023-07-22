@@ -38,9 +38,20 @@
                                                 class="fa fa-home fa-lg"></i> Home</a></li>
                                     <li class="nav-item"><a class="nav-link text-dark" href="about.html"><i
                                         class="fa fa-info-circle fa-lg" aria-hidden="true"></i> About</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="products.html"><i
-                                                class="fa fa-product-hunt fa-lg"></i> Products</a></li>
-                                    <li class="nav-item"><a class="nav-link text-dark" href="#"><i
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link text-dark dropdown-toggle" href="apparel.html" id="productsDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-product-hunt" aria-hidden="true"></i> Products
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                                                <a class="dropdown-item" href="apparel.html">Apparel</a>
+                                                <a class="dropdown-item" href="decor.html">Decor</a>
+                                                <a class="dropdown-item" href="artisans.html">Artisans</a>
+                                            </div>
+                                        </li>
+
+                                    <li class="nav-item"><a class="nav-link text-dark" href="events.html"><i
                                                 class="fa fa-list fa-lg"></i> Events</a></li>
                                     <li class="nav-item active"><a class="nav-link text-dark" href="contactus.html"><i
                                                 class="fa fa-address-card fa-lg"></i> Contact</a></li>
@@ -49,7 +60,7 @@
                             <div class="collapse navbar-collapse d-flex flex-row-reverse" id="wateringNavbar2">
                                 <ul class="navbar-nav">
                                     <!-- This would be made into a modal to sign in?? -->
-                                    <li class="nav-item active"><a class="nav-link text-dark" href="#"><i
+                                    <li class="nav-item active"><a class="nav-link text-dark" href="#" data-toggle="modal" data-target="#loginModal" ><i
                                                 class="fa fa-user-o fa-lg"></i> Login</a></li>
                                     <li class="nav-item"><a class="nav-link text-dark" href="#"><i
                                                 class="fa fa-shopping-cart fa-lg"></i></a></li>
@@ -57,6 +68,32 @@
                             </div>
                         </div>
                     </nav>
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+                        aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </form>                                    
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
 
                 </div>
             </div>
@@ -76,29 +113,88 @@
                 <hr />
             </div>
         </div>
-        <div class="row row-content align-items-center">
-            <div class="col-sm-6 justify-content-center">
+
+
+        <div class="row">
+            <div class="col-sm-8 justify-content-center">
+                
                 <p> If you have any questions or concerns, please reach out to us. We will be more than happy to assist
                     you.
                     Thank you for supporting our small business!
                 </p>
-                <div class="col-12">
-                    <h6>GET IN TOUCH</h6>
+                <div class="col-8">
+                    <h6>CALL US</h6>
 
                 </div>
-                <a role="button" class="btn btn-link text-info" href="tel:+919830031105"><i class="fa fa-phone"></i> +91
+                <a role="button" class="btn btn-link text-info mb-3" href="tel:+919830031105"><i class="fa fa-phone"></i> +91
                     98300 31105</a><br>
-                <!-- <a role="button" class="btn btn-link text-info" href="mailto:1234@gmail.com"><i class="fa fa-envelope-o"></i> 1234@gmail.com </a> -->
-            </div>
+            </div>    
+                <div class="d-flex justify-content-start">
+                    <div class="col-sm-4">
+                        <img class="mb-5 img-thumbnail" class="img-fluid" src="/img/blueBackdrop.jpg" alt="White box with gift inside"/>
+                    </div>
+                </div>
 
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-group row">
+                            <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="First Name" />
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                    placeholder="Last Name" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="areaCode" class="col-md-2 col-form-label">Telephone</label>
+                            <div class="col-3 col-md-2">
+                                <input type="tel" class="form-control" id="areaCode" name="areaCode"
+                                    placeholder="Area code" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control" name="telNum" placeholder="Telephone Number" />
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label for="email" class="col-md-2 col-form-label">Email</label>
+                            <div class="col-md-8">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                            <div class="col-sm-8">
+                                <textarea id="feedback" class="form-control rounded-0" name="feedback"
+                                    placeholder="Feedback" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary bg-info border border-info mb-4">Send</button>
+                            </div>
+                        </div>
+                    </form>
+    
+                </div>
+            </div>
         </div>
 
-        <div class="row row-content">
-            <!-- <div class="col-12"> -->
-            <!-- <h2>Send us your Feedback</h2> -->
-            <!-- <hr /> -->
-            <!-- </div> -->
-            <div class="col-md-10">
+            
+        
+
+        
+
+        <!-- <div class="row row-content"> -->
+            <!-- <div class="col-md-10">
                 <form>
                     <div class="form-group row">
                         <label for="firstName" class="col-md-2 col-form-label">First Name</label>
@@ -125,25 +221,14 @@
                             <input type="tel" class="form-control" name="telNum" placeholder="Telephone Number" />
                         </div>
                     </div>
+
                     <div class="form-group row">
                         <label for="email" class="col-md-2 col-form-label">Email</label>
                         <div class="col-md-6">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
                         </div>
                     </div>
-                    <!-- <div class="form-group row">
-                    <div class="col offset-md-2">
-                        May we contact you?
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes"/>
-                            <label for="contactYes">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input type="radio" class="form check-input" id="contactNo" name="contactRadios" value="no"/>
-                            <label for="contactNo">No</label>
-                        </div>
-                    </div>
-                </div> -->
+                    
                     <div class="form-group row">
                         <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
                         <div class="col-sm-6">
@@ -153,13 +238,19 @@
                     </div>
                     <div class="form-group row">
                         <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary bg-info border border-info">Send</button>
+                            <button type="submit" class="btn btn-primary bg-info border border-info mb-4">Send</button>
                         </div>
                     </div>
                 </form>
-            </div>
+
+             
         </div>
-    </div>
+         -->
+    <!-- </div> -->
+    
+    
+
+
 
 
 
@@ -172,7 +263,8 @@
                     <ul class="list-unstyled">
                         <li><a class="text-info" href="index.html">Home</a></li>
                         <li><a class="text-info" href="about.html">About</a></li>
-                        <li><a class="text-info" href="#">Events</a></li>
+                        <li><a class="text-info" href="apparel.html">Products</a></li>
+                        <li><a class="text-info" href="events.html">Events</a></li>
                         <li><a class="text-info active" href="#">Contact</a></li>
                     </ul>
                 </div>

@@ -6,18 +6,18 @@ $color-dark: #60106b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 $color-teal: #17A2B8;
 
-// $body-font: serif, system-ui;
-// $header-font: "Libre Baskerville", sans-serif;
+$body-font: serif, system-ui;
+$header-font: "Libre Baskerville", sans-serif;
 
 
 
 
 body {
-    font-family: serif, system-ui;
+    font-family: $body-font;
 }
 
 h1, h2, h3, h5, h6 {
-    font-family: "Libre Baskerville", sans-serif;
+    font-family: $header-font;
 }
 
 h2 {
@@ -80,5 +80,16 @@ a, a:hover {
     z-index: 100;
 }
 
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+#imagesRow {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
